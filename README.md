@@ -1,28 +1,29 @@
 # MLProject
 ## ML_Custom_Classifier.py
-Below are instructions to run the **training script**, which will train the model and save the parameters to a file on your computer. This section will guide you on how to download the food-101 images and install the correct required packages. 
+Below are instructions to run the **training script**, which will train the model and save the parameters to a file on your computer. This section will guide you on how to download the food-101 images and install the required packages. 
 
-### pip install the following packages:
+#### pip install the following packages:
 1.     pip install numpy
 2.     pip install pandas
 3.     pip install matplotlib
 4.     pip install scikit-learn
 5.     pip install tensorflow
 
-### To download the food-101 dataset:
+#### To download the food-101 dataset:
 
     import kagglehub
     path = kagglehub.dataset_download("kmader/food41")
     print("Path to dataset files:", path)
 
-### Now to run the program:
+#### Now to run the program:
 - Update the dataset path in the program to the path on your specific computer
-- Run this updated script and watch grass grow : )
+- Run this updated script and ensure that the Epochs are incrementing
+- Watch grass grow : )
 
 ## ML_Image_Classifier.py
 The **ML_Image_Classifier.py** script opens a new window and uses the computer camera to classify objects in front of it. This uses the model that was previously trained with __ML_Custom_Classifier.py__. This will also require a few packages to run.
 
-### pip install the following packages
+### pip install the following packages:
 1. 
 2. 
 3. 
