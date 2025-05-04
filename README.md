@@ -1,4 +1,20 @@
-# MLProject
+# Instructions for Running the Code for Eatalyze: Using Machine Learning to Classify and Analyze Food Nutrition
+
+
+## Linear Regression and XGBOOST Scripts
+#### pip install the following packages:
+1.     pip install numpy
+2.     pip install pandas
+3.     pip install matplotlib
+4.     pip install scikit-learn
+5.     pip install statsmodels
+6.     pip install xgboost
+
+Ensure the [food.xlsx](https://www.kaggle.com/datasets/shrutisaxena/food-nutrition-dataset) data is installed and in the same folder as your jupyter notebooks for this line to run
+`food = pd.read_excel("food.xlsx", sheet_name="food")`. From there, just run all cells and the graphs and tables should appear!
+
+
+
 ## ML_Custom_Classifier.py
 Below are instructions to run the **training script**, which will train the model and save the parameters to a file on your computer. This section will guide you on how to download the food-101 images and install the required packages. 
 
@@ -21,8 +37,6 @@ Below are instructions to run the **training script**, which will train the mode
 - Watch grass grow : )
 
 
-
-## ML_Image_Classifier.py
 The **ML_Image_Classifier.py** script opens a new window and uses the computer camera to classify objects in front of it. This uses the model that was previously trained with __ML_Custom_Classifier.py__. This will also require a few packages to run.
 
 #### pip install the following packages:
