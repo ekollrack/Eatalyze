@@ -3,10 +3,11 @@
 Below are instructions to run the **training script**, which will train the model and save the parameters to a file on your computer. This section will guide you on how to download the food-101 images and install the correct required packages. 
 
 ### pip install the following packages:
-1. 
-2.
-3.
-4. 
+1.     pip install numpy
+2.     pip install pandas
+3.     pip install matplotlib
+4.     pip install scikit-learn
+5.     pip install tensorflow
 
 ### To download the food-101 dataset:
 
