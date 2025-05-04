@@ -10,13 +10,13 @@ Below are instructions to run the **training script**, which will train the mode
 
 ### To download the food-101 dataset:
 
-import kagglehub
-
-path = kagglehub.dataset_download("kmader/food41")
-
-print("Path to dataset files:", path)
+    import kagglehub
+    path = kagglehub.dataset_download("kmader/food41")
+    print("Path to dataset files:", path)
 
 ### Now to run the program:
+- Update the dataset path in the program to the path on your specific computer
+- 
 
 ## ML_Image_Classifier.py
 The **ML_Image_Classifier.py** script opens a new window and uses the computer camera to classify objects in front of it. This uses the model that was previously trained with __ML_Custom_Classifier.py__. This will also require a few packages to run.
