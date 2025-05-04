@@ -11,7 +11,6 @@ Below are instructions to run the **training script**, which will train the mode
 ### To download the food-101 dataset:
 
 import kagglehub
-# Download latest version
 path = kagglehub.dataset_download("kmader/food41")
 print("Path to dataset files:", path)
 
