@@ -1,5 +1,5 @@
 # Instructions for Running the Code for Eatalyze: Using Machine Learning to Classify and Analyze Food Nutrition
-
+#### Note: Code for Linear Regression and XGBoost are in the "Code" folder
 
 ## Linear Regression and XGBOOST Scripts
 #### pip install the following packages:
