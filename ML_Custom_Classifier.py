@@ -73,6 +73,7 @@ test_images = test_generator.flow_from_dataframe(dataframe=test_df,
 model = models.Sequential([
     layers.Input(shape=(224, 224, 3)),
     
+    #to increase accuracy, we can start with the 64 filters to get more diversity (will take much longer to train)
     #layers.Conv2D(32, (3, 3), activation='relu', padding='same'),
     #layers.BatchNormalization(),
     #layers.MaxPooling2D(pool_size=(2, 2)),
@@ -90,18 +91,19 @@ model = models.Sequential([
     layers.MaxPooling2D(pool_size=(2, 2)),
 
     #add or remove this layer to increase or decrease # of params
-    #layers.Conv2D(512, (3, 3), activation='relu', padding='same'),
-    #layers.BatchNormalization(),
-    #layers.MaxPooling2D(pool_size=(2, 2)),
+    layers.Conv2D(512, (3, 3), activation='relu', padding='same'),
+    layers.BatchNormalization(),
+    layers.MaxPooling2D(pool_size=(2, 2)),
 
     #can be used for more paramters (commented out due to inneficiency)
-    #layers.Flatten(),
+    layers.Flatten(),
     #layers.Dense(512, activation='relu'),
 
     #need this next line to cut down parameters to reduce training time (to remove huge flatten+dense operation)
-    layers.GlobalAveragePooling2D(),
+    #layers.GlobalAveragePooling2D(),
+
     layers.Dense(256, activation='relu'),
-    layers.Dropout(0.4),
+    layers.Dropout(0.5),
     layers.Dense(101, activation='softmax')  # 101 food classes (this softmax is interesting as it will smooth the results - 
                                                 #meaning that we oftentimes get predicted entries that are "proximaly close" to the correct answer
                                                 # donuts are not similar to dumplings, but they are close on the "labels" list
@@ -120,17 +122,26 @@ model.compile(
 history = model.fit(
     train_images,
     validation_data=val_images,
-    epochs=10,
+    epochs=20,
     callbacks=[
         tf.keras.callbacks.EarlyStopping(
             monitor='val_loss',
-            patience=3,
+            patience=5,
             restore_best_weights=True)])
 
+plt.plot(history.history['accuracy'], label='accuracy')
+plt.plot(history.history['val_accuracy'], label = 'val_accuracy')
+plt.xlabel('Epoch')
+plt.ylabel('Accuracy')
+plt.ylim([0.5, 1])
+plt.legend(loc='lower right')
+plt.show()
 
 #print the results
 results = model.evaluate(test_images, verbose=0)
 print("Test Accuracy: {:.2f}%".format(results[1] * 100))
+print(results)
+
 
 #save the trained model to a file
 model.save("food_cnn_model_custom.h5")
