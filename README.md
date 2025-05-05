@@ -37,6 +37,7 @@ Below are instructions to run the **training script**, which will train the mode
 - Watch grass grow : )
 
 
+## ML_Image_Classifier.py
 The **ML_Image_Classifier.py** script opens a new window and uses the computer camera to classify objects in front of it. This uses the model that was previously trained with __ML_Custom_Classifier.py__. This will also require a few packages to run.
 
 #### pip install the following packages:
