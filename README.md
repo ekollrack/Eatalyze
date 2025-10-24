@@ -1,4 +1,5 @@
 # Instructions for Running the Code for Eatalyze: Using Machine Learning to Classify and Analyze Food Nutrition
+### Authors: Elisabeth Kollrack, Ellie Sheppard, Aaron Wilson
 
 Eatalyze is a machine learning project that classifies foods and analyzes their nutritional properties using traditional machine learning models and deep learning techniques. It includes:
 
