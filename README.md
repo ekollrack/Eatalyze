@@ -1,7 +1,12 @@
 # Instructions for Running the Code for Eatalyze: Using Machine Learning to Classify and Analyze Food Nutrition
-#### Note: Code for Linear Regression and XGBoost are in the "Code" folder
 
-## Linear Regression and XGBOOST Scripts
+Eatalyze is a machine learning project that classifies foods and analyzes their nutritional properties using traditional machine learning models and deep learning techniques. It includes:
+
+- Nutritional analysis using Linear Regression and XGBoost
+- A custom-trained image classifier using the Food-101 dataset
+- A live webcam-based food classifier that predicts food categories in real time
+
+## Linear Regression and XGBOOST Scripts (Located in the Code/ Folder)
 #### pip install the following packages:
 1.     pip install numpy
 2.     pip install pandas
